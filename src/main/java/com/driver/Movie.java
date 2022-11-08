@@ -1,25 +1,35 @@
 package com.driver;
 
 public class Movie {
-    private String name;
+    private int id;
+    private String movieName;
     private int durationInMinutes;
     private double imdbRating;
 
     public Movie() {
     }
 
-    public Movie(String name, int durationInMinutes, double imdbRating) {
-        this.name = name;
+    public Movie(int id, String movieName, int durationInMinutes, double imdbRating) {
+        this.id = id;
+        this.movieName = movieName;
         this.durationInMinutes = durationInMinutes;
         this.imdbRating = imdbRating;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getName() {
-        return name;
+        return movieName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.movieName = name;
     }
 
     public int getDurationInMinutes() {

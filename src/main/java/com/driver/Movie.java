@@ -1,7 +1,6 @@
 package com.driver;
 
 public class Movie {
-    private int id;
     private String movieName;
     private int durationInMinutes;
     private double imdbRating;
@@ -9,20 +8,13 @@ public class Movie {
     public Movie() {
     }
 
-    public Movie(int id, String movieName, int durationInMinutes, double imdbRating) {
-        this.id = id;
+    public Movie(String movieName, int durationInMinutes, double imdbRating) {
         this.movieName = movieName;
         this.durationInMinutes = durationInMinutes;
         this.imdbRating = imdbRating;
     }
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getName() {
         return movieName;

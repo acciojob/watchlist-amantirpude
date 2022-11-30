@@ -9,18 +9,18 @@ public class Director {
     public Director() {
     }
 
-    public Director(String name, int numberOfMovies, double imdbRating) {
+    public Director(String directorName, int numberOfMovies, double imdbRating) {
         this.directorName = directorName;
         this.numberOfMovies = numberOfMovies;
         this.imdbRating = imdbRating;
     }
 
-    public String getName() {
+    public String getDirectorName() {
         return directorName;
     }
 
-    public void setName(String name) {
-        this.directorName = name;
+    public void setDirectorName(String directorName) {
+        this.directorName = directorName;
     }
 
     public int getNumberOfMovies() {

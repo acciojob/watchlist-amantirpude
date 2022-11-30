@@ -29,8 +29,8 @@ public class MovieService {
         return movieRepo.findMovieByDirectorName(director);
     }
 
-    public void createMovieDirectorPair(String movie, String director){
-        movieRepo.createMovieDirectorPair(movie,director);
+    public void createMovieDirectorPair(String movieName, String directorName){
+        movieRepo.createMovieDirectorPair(movieName,directorName);
     }
     public void deleteDirector(String director){
         movieRepo.deleteDirector(director);

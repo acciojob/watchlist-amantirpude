@@ -15,11 +15,11 @@ public class Director {
         this.imdbRating = imdbRating;
     }
 
-    public String getDirectorName() {
+    public String getName() {
         return name;
     }
 
-    public void setDirectorName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 

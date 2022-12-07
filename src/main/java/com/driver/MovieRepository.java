@@ -15,11 +15,11 @@ public class MovieRepository {
 
 
     public void addMovie(Movie movie){
-        movieMap.put(movie.getMovieName(),movie);
+        movieMap.put(movie.getName(),movie);
     }
 
     public void addDirector(Director director){
-        directorMap.put(director.getDirectorName(), director);
+        directorMap.put(director.getName(), director);
     }
 
     public Movie getMovie(String movieName){

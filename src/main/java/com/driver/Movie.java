@@ -14,11 +14,11 @@ public class Movie {
         this.imdbRating = imdbRating;
     }
 
-    public String getMovieName() {
+    public String getName() {
         return name;
     }
 
-    public void setMovieName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 

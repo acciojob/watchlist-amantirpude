@@ -11,7 +11,7 @@ import java.util.Map;
 public class MovieRepository {
     private HashMap<String, Movie> movieMap = new HashMap<>();
     private HashMap<String, Director> directorMap= new HashMap<>();
-    private HashMap<String, List<String>> movieDirectorMapping = new HashMap<>();
+    private HashMap<String, List<Movie>> movieDirectorMapping = new HashMap<>();
 
 
     public void addMovie(Movie movie){
@@ -30,21 +30,21 @@ public class MovieRepository {
         return directorMap.get(directorName);
     }
 
-    public List<String> findMovieByDirectorName(String director){
-        List<String> movieListByDirector = movieDirectorMapping.get(director);
-        return movieListByDirector;
+    public List<Movie> findMovieByDirectorName(String director){
+        return movieDirectorMapping.get(director);
     }
 
     public void createMovieDirectorPair(String movieName, String directorName){
-        List<String> moviesByDirector;
-        if(movieDirectorMapping.isEmpty()){
-             moviesByDirector = new ArrayList<>();
-            moviesByDirector.add(movieName);
+        Movie movie = movieMap.get(movieName);
+        List<Movie> moviesByDirector;
+        if(movieDirectorMapping.containsKey(directorName)){
+            moviesByDirector = movieDirectorMapping.get(directorName);
+            moviesByDirector.add(movie);
             movieDirectorMapping.put(directorName,moviesByDirector);
         }
         else{
-            moviesByDirector = movieDirectorMapping.get(directorName);
-            moviesByDirector.add(movieName);
+            moviesByDirector = new ArrayList<>();
+            moviesByDirector.add(movie);
             movieDirectorMapping.put(directorName,moviesByDirector);
         }
     }
